@@ -31,13 +31,24 @@ impl Safe {
 		Ok(())
 	}
 
-	pub fn turn(&mut self, movement: Movement) {
+	pub fn turn(&mut self, movement: Movement) -> u32 {
+		let starts_zero = self.current_code == 0;
+
 		let offset = match movement.direction {
 			Direction::Left => -1,
 			Direction::Right => 1,
 		} * movement.amount as i32;
 
-		self.current_code = (self.current_code + offset).rem_euclid(self.max_code + 1);
+		let overturned = self.current_code + offset;
+		self.current_code = overturned.rem_euclid(self.max_code + 1);
+
+		if overturned > 0 {
+			overturned as u32 / 100
+		} else if starts_zero {
+			overturned.abs() as u32 / 100
+		} else {
+			overturned.abs() as u32 / 100 + 1
+		}
 	}
 
 	pub fn current_code(self) -> i32 {
