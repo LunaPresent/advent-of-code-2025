@@ -1,0 +1,10 @@
+[workspace]
+members = ["day-01"]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+authors = ["Luna Present <code@lunapresent.net>"]
+
+[workspace.dependencies]
+color-eyre = "0.6.5"
