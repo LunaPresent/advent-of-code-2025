@@ -18,6 +18,10 @@ impl RollStack {
 		self.slots.as_slice()
 	}
 
+	pub fn slots_mut(&mut self) -> &mut [RollSlot] {
+		self.slots.as_mut_slice()
+	}
+
 	pub fn neighbours(&self, slot_idx: usize) -> impl Iterator<Item = RollSlot> {
 		let width = self.width as isize;
 		let height = self.slots.len() as isize / width;

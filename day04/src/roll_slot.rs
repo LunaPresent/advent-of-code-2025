@@ -4,6 +4,7 @@ use color_eyre::eyre;
 pub enum RollSlot {
 	Empty,
 	Filled,
+	Removeable,
 }
 
 impl TryFrom<char> for RollSlot {
