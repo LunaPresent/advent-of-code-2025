@@ -66,21 +66,28 @@ dependencies = [
 ]
 
 [[package]]
-name = "day-01"
+name = "day01"
 version = "0.1.0"
 dependencies = [
  "color-eyre",
 ]
 
 [[package]]
-name = "day-02"
+name = "day02"
 version = "0.1.0"
 dependencies = [
  "color-eyre",
 ]
 
 [[package]]
-name = "day-03"
+name = "day03"
+version = "0.1.0"
+dependencies = [
+ "color-eyre",
+]
+
+[[package]]
+name = "day04"
 version = "0.1.0"
 dependencies = [
  "color-eyre",

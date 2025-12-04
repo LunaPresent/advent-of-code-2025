@@ -2,7 +2,7 @@ use std::io::{self, Read as _};
 
 use color_eyre::eyre;
 
-use day_02::*;
+use day02::*;
 
 fn next_lowest_id(id_iters: &mut Vec<InvalidIdIterator>) -> Option<u64> {
 	id_iters

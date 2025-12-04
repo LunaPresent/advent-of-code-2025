@@ -2,7 +2,7 @@ use std::io::{self, Read as _};
 
 use color_eyre::eyre;
 
-use day_02::*;
+use day02::*;
 
 fn main() -> eyre::Result<()> {
 	color_eyre::install()?;
