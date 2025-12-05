@@ -20,6 +20,10 @@ impl FromStr for IdRange {
 }
 
 impl IdRange {
+	pub fn len(self) -> usize {
+		self.to - self.from
+	}
+
 	pub fn contains(self, id: usize) -> bool {
 		id >= self.from && id < self.to
 	}

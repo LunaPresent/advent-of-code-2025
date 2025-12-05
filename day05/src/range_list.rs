@@ -6,6 +6,10 @@ pub struct RangeList {
 }
 
 impl RangeList {
+	pub fn ranges(&self) -> &[IdRange] {
+		self.ranges.as_slice()
+	}
+
 	pub fn push(&mut self, mut range: IdRange) {
 		let mut i = 0;
 		while i < self.ranges.len() {
