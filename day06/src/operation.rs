@@ -8,6 +8,18 @@ pub enum Operation {
 	Multiply,
 }
 
+impl TryFrom<char> for Operation {
+	type Error = eyre::Report;
+
+	fn try_from(value: char) -> Result<Self, Self::Error> {
+		match value {
+			'+' => Ok(Self::Add),
+			'*' => Ok(Self::Multiply),
+			_ => Err(eyre::eyre!("invalid operation")),
+		}
+	}
+}
+
 impl FromStr for Operation {
 	type Err = eyre::Report;
 
